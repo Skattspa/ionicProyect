@@ -1,0 +1,4 @@
+#Wed Jun 06 11:17:28 CEST 2018
+base.0=/Users/Dev1/Desktop/Projects/Juan/ionicExample/MyIonicProject/platforms/android/app/build/intermediates/transforms/dex/release/0
+renamed.0=classes.dex
+file.0=/Users/Dev1/Desktop/Projects/Juan/ionicExample/MyIonicProject/platforms/android/app/build/intermediates/transforms/dex/release/0/classes.dex

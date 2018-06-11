@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mi pagina</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>TOQUETEANDO!</h3>
+
+  <p>
+    Esta es mi primera page Ionic
+  </p>
+  <div *ngIf="persona_cargada">
+    <label for="peso">PESO (Kg)</label>
+    <input type="text" size="4" id="peso" [(ngModel)]="persona.peso">
+    <br>
+    <label for="estatura">ESTATURA (M)</label>
+    <input type="text" size="4" id="estatura" [(ngModel)]="persona.estatura">
+    <button ion-button (click)="calculaIMC()">CalculaIMC</button>
+    <label for="resultado">Resultado</label>
+    <input type="text" size="4" id="resultado" readonly value={{resultado}}>
+    <p>
+      <button ion-button color="primary" menuToggle>Toggle Menu</button>
+    </p>
+  </div>
+  <div *ngIf="!persona_cargada">
+    <p class="loader"></p>
+    <!-- <img src="assets/imgs/logo.png" height="50px" width="50px"> -->
+  </div>
+  <div *ngIf="!lista_personas">
+    <div *ngFor="let unapersona of lista_personas; let i = index">
+      <ul>
+        <li (click)=mostrarPersona(unapersona)>{{i}}--{{unapersona.nombre}},{{unapersona.peso}} </li>
+      </ul>
+    </div>
+  </div>
+</ion-content>
